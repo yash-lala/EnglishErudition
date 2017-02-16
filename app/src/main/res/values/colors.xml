@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#03A9F4</color>
+    <color name="colorAccent">#FF85DFEC</color>
+
+
+    <!-- my colors!-->
+    <color name="SexyBlue">#03A9F4</color>
+    <color name="MasstGrey">#3d3d3d</color>
+    <color name="JyaadaGrey">#2e2e2e</color>
+    <color name="KalaNotSoKhata">#000</color>
+    <color name="KaafiSafeed">#fff</color>
+    <color name="RaseelaLaal">#ff2800</color>
+    <color name="JakasCyan">#FF85DFEC</color>
+    <color name="GeelaNeela">#0a578b</color>
+</resources>

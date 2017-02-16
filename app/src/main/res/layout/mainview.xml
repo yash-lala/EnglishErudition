@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alienware.tabandbottombar.HomepageFrag">
+
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/coordinatorLayout"
+        />
+
+
+
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:background="#000">
+
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            design:menu="@menu/bottombar_items"
+            design:itemTextColor="@color/GeelaNeela"
+            design:itemIconTint="@color/SexyBlue"
+            design:itemBackground="@color/KalaNotSoKhata"
+            />
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
