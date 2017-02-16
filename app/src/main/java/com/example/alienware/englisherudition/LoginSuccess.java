@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,7 +26,7 @@ public class LoginSuccess extends Fragment {
 
     TextView name,userName,email,dateOfCreation,uid;
     TheSessionKeeper theSessionKeeper;
-    Button logout;
+    FloatingActionButton logout;
     ChangeFrag tc;
     CoordinatorLayout coordinatorLayout;
     Login login;
@@ -58,7 +59,7 @@ public class LoginSuccess extends Fragment {
         dateOfCreation.setText(theSessionKeeper.get("dateOfCreation"));
 
 
-        logout = (Button)view.findViewById(R.id.logout);
+        logout = (FloatingActionButton)view.findViewById(R.id.logout);
         logout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
