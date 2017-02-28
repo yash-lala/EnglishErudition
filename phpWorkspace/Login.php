@@ -37,6 +37,7 @@ if($user != false){
       $response['user']['name'] = $user['nameOfUser'];
       $response['user']['user_name'] = $user['user_name'];
       $response['user']['email'] = $user['email'];
+      $response['user']['score'] = $user['score'];
       $response['user']['DateOfCreation'] = $user['created_at'];
       echo json_encode($response);
     }else{

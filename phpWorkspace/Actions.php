@@ -29,7 +29,7 @@ class Actions {
 
   function getByCredentials($user_name,$password){
     $result = $this->connection->prepare("SELECT * FROM users WHERE user_name = '$user_name' AND password = ? ");
-    $result->bind_param('s' , $password);
+    $result->bind_param('s', $password);
     #$result->bind_param(1, $email);
     #$result->bind_param(2, $password);
     if($result->execute()){
@@ -77,6 +77,30 @@ class Actions {
     return $bool;
   }
 
+
+  function incrementScore($score,$uid){
+    $result= $this->connection->prepare("UPDATE users set score = score + $score where uid = ?");
+    $result->bind_param('i', $uid);
+    $result->execute();
+    if($this->connection->affected_rows > 0){
+        $result->close();
+        return true;
+    }else {
+        $result->close();
+        return false;
+    }
+  }
+
+  function getLeaderboard(){
+    $result = $this->connection->prepare("SELECT nameOfUser,user_name,score from users ORDER BY score DESC");
+    $result->execute();
+    $data = $result->get_result();
+    while($buffer = $data->fetch_assoc()){
+      $userArr[] = $buffer;
+    }
+    $result->close();
+    return $userArr;
+  }
 
 
 }

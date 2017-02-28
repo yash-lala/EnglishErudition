@@ -1,0 +1,11 @@
+create table users(
+    uid binary(16) primary key,
+    firebase_id varchar(300) unique,
+    nameOfUser varchar(100) not null,
+    user_name varchar(50) unique,
+    email varchar(200) unique,
+    password varchar(64) not null,
+    score int not null default 0,
+    created_at timestamp not null default current_timestamp,
+    loggedIn boolean not null default false
+    );
