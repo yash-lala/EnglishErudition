@@ -8,7 +8,7 @@
     android:visible="false"/>
     <item
         android:id="@+id/timeline"
-        android:title="@string/timeline"
+        android:title="@string/leaderboard"
         android:icon="@drawable/ic_timeline"
         />
 

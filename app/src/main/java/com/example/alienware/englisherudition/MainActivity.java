@@ -15,7 +15,7 @@ public class    MainActivity extends AppCompatActivity implements ChangeFrag{
     FragmentTransaction fragmentTransaction;
     FragmentManager fragmentManager;
     Login login;
-    LoginSuccess loginSuccess;
+    HomepageFrag homepageFrag;
     TheSessionKeeper theSessionKeeper;
     CoordinatorLayout coordinatorLayout;
     static FrameLayout frameLayout;
@@ -29,16 +29,21 @@ public class    MainActivity extends AppCompatActivity implements ChangeFrag{
         frameLayout = (FrameLayout)findViewById(R.id.frame);
         fragmentManager = getSupportFragmentManager();
         login = new Login();
-        loginSuccess = new LoginSuccess();
+        homepageFrag = new HomepageFrag();
         theSessionKeeper = TheSessionKeeper.getInstance(getApplicationContext());
-        if (theSessionKeeper.isLoggedIn()) {
-            //frag for login_success
-            bringChange(loginSuccess);
+        if(theSessionKeeper.isFirstTime()){
+            bringChange(new IntroSlider());
+        }else{
+            if (theSessionKeeper.isLoggedIn()) {
+                //frag for login_success
+                bringChange(homepageFrag);
+            }
+            else {
+                //frag for login
+                bringChange(login);
+            }
         }
-        else {
-            //frag for login
-            bringChange(login);
-        }
+
     }
 
 

@@ -25,13 +25,14 @@ public class HomeFrag extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        tc = (ChangeFrag)getActivity();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.home,container,false);
         viewPager = (ViewPager)view.findViewById(R.id.viewPager);
-        tc = (ChangeFrag)getActivity();
+
         readingFrag = new ReadingFrag();
         writingFrag = new WritingFrag();
         listeningFrag = new ListeningFrag();
@@ -39,16 +40,13 @@ public class HomeFrag extends Fragment {
         tabLayout = (TabLayout)view.findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.writing);
-        tabLayout.getTabAt(1).setIcon(R.drawable.reading);
-        tabLayout.getTabAt(2).setIcon(R.drawable.listening);
 
         return view;
     }
 
     void setViewPager(ViewPager viewPager){
-        ThePager thePager = new ThePager(getFragmentManager());
-        thePager.addFragment(writingFrag, getString(R.string.writing));
+        ThePager thePager = new ThePager(getChildFragmentManager());
+
         thePager.addFragment(readingFrag, getString(R.string.reading));
         thePager.addFragment(listeningFrag, getString(R.string.listening));
         viewPager.setAdapter(thePager);

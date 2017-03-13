@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY ip "http://192.168.1.100/EnglishErudition/">
+    ]>
 <resources>
-    <string name="link_login">http://192.168.1.100/phpWorkspace/Login.php</string>
-    <string name="link_signUp">http://192.168.1.100/phpWorkspace/Register.php</string>
-    <string name="link_logOut">http://192.168.1.100/phpWorkspace/Logout.php</string>>
+    <string name="link_login">&ip;Login.php</string>
+    <string name="link_signUp">&ip;Register.php</string>
+    <string name="link_logOut">&ip;Logout.php</string>
+    <string name="link_leaderboard">&ip;Leaderboard.php</string>
+    <string name="link_incrementScore">&ip;IncrementScore.php</string>
+    <string name="link_rohanJson">&ip;receiver.php</string>
+    <string name="link_Listening">&ip;test17.php</string>
+    <string name="link_Reading">&ip;test8.php</string>
+
+
+
 </resources>

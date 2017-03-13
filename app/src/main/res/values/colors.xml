@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#03A9F4</color>
     <color name="colorAccent">#FF85DFEC</color>
 
-
+<color name="Cream">#aca788</color>
     <!-- my colors!-->
     <color name="SexyBlue">#03A9F4</color>
     <color name="MasstGrey">#3d3d3d</color>
@@ -14,4 +14,41 @@
     <color name="RaseelaLaal">#ff2800</color>
     <color name="JakasCyan">#FF85DFEC</color>
     <color name="GeelaNeela">#0a578b</color>
+
+    //background colors for intro screen(4 slides)
+    <color name="bg_1">#000066</color>
+    <color name="bg_2">#5B2C6F</color>
+    <color name="bg_3">#006400</color>
+    <color name="bg_4">#A93226</color>
+
+
+    //dots active colors(4 types)
+    <color name="bg_1_active">#93c6fd</color>
+    <color name="bg_2_active">#7D3C98</color>
+    <color name="bg_3_active">#32cd32</color>
+    <color name="bg_4_active">#E74C3C</color>
+
+
+    //dots inactive colors(4 types)
+    <color name="bg_1_inactive">#2278d4</color>
+    <color name="bg_2_inactive">#6C3483  </color>
+    <color name="bg_3_inactive">#228b22</color>
+    <color name="bg_4_inactive">#CB4335</color>
+
+    //placing it in a array to call from activity
+
+    <array name="active">
+        <item>@color/bg_1_active</item>
+        <item>@color/bg_2_active</item>
+        <item>@color/bg_3_active</item>
+        <item>@color/bg_4_active</item>
+    </array>
+
+    <array name="inactive">
+        <item>@color/bg_1_inactive</item>
+        <item>@color/bg_2_inactive</item>
+        <item>@color/bg_3_inactive</item>
+        <item>@color/bg_4_inactive</item>
+    </array>
+
 </resources>

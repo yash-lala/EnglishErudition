@@ -63,18 +63,24 @@ public class AsyncConnect extends AsyncTask<String,Void,JSONObject> {
                             httpURLConnection.setDoInput(true);
                             httpURLConnection.setDoOutput(true);
                             httpURLConnection.connect();
-                            BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(httpURLConnection.getOutputStream());
-                            bufferedOutputStream.write(json.toString().getBytes());
-                            bufferedOutputStream.flush();
+                                if(json!=null){
+                                    BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(httpURLConnection.getOutputStream());
+                                    bufferedOutputStream.write(json.toString().getBytes());
+                                    bufferedOutputStream.flush();
+                                }
+
 
 
                             serverResponse = new StringBuilder();
                             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
                             while ((inputBuffer = bufferedReader.readLine()) != null) {
+
                                 serverResponse.append(inputBuffer + "\n");
                             }
                             bufferedReader.close();
+
                             inputBuffer = serverResponse.toString();
+                              inputBuffer =  inputBuffer.replaceAll("��","");
                             System.out.println("String from server->" + inputBuffer);
                             toReturn = new JSONObject(inputBuffer);
 

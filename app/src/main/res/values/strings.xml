@@ -10,10 +10,36 @@
     <string name="e_mail">E-mail</string>
     <string name="sign_up">Sign Up</string>
     <string name="passwords_don_t_match">Passwords Don\'t Match</string>
-    <string name="timeline">Timeline</string>
+    <string name="leaderboard">Leaderboard</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="reading">Reading</string>
     <string name="writing">Writing</string>
     <string name="listening">Listening</string>
+
+
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="got_it">Got it</string>
+
+
+    <string name="slide1_title">E.N.G.L.I.S.H Tutor</string>
+    <string name="slide1_desc">No one does it Better.</string>
+
+
+    <string name="slide2_title">Basics</string>
+    <string name="slide2_desc">Improves Reading , Listening , Writing skills of the User.</string>
+
+
+    <string name="slide3_title">User Levels</string>
+    <string name="slide3_desc">Provides study material with respect to the knowledge of the User.</string>
+
+
+    <string name="slide4_title">Regular Tests</string>
+    <string name="slide4_desc">Tests to check progess of the Users.</string>
+
+    <string name="play_again">play again</string>
+    <string name="play_agains_desc">this will clear app data to restore isfirsttime()</string>
+
 </resources>

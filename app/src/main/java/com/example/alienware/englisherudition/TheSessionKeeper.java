@@ -17,7 +17,7 @@ public class TheSessionKeeper {
     private static final String isFirstTime = "isFirstTime";
     private static final String isLoggedIn = "LoggedIn";
     private static final int mode =0; //private mode
-    private static final String[] fields = {"uid","name","user_name","email","dateOfCreation"};
+    private static final String[] fields = {"uid","name","user_name","email","score","dateOfCreation"};
 
     public TheSessionKeeper(Context c){
         this.context = c;
@@ -50,7 +50,7 @@ public class TheSessionKeeper {
     }
 
     public boolean isFirstTime(){
-        return sharedPreferences.getBoolean(isFirstTime, false);
+        return sharedPreferences.getBoolean(isFirstTime, true);
 
     }
     public boolean isLoggedIn(){
@@ -60,6 +60,19 @@ public class TheSessionKeeper {
 
     public String get(String toGet){
         return sharedPreferences.getString(toGet,null);
+    }
+
+   public int getLevel(){
+       return Integer.parseInt(sharedPreferences.getString("score","0"));
+
+       //return HouseKeeping.calLevel(score);
+   }
+
+    public void incrementScore(int score){
+        editor = sharedPreferences.edit();
+        editor.putString("score",""+(Integer.parseInt(get("score"))+score));
+
+        editor.apply();
     }
 
     /*public void bomb(){

@@ -18,10 +18,10 @@ public class HomepageFrag extends Fragment {
 
 
     BottomNavigationView bottomNavigationView;
-    HomeFrag homeFrag;
-    TimelineFrag timelineFrag;
+    HomeFrag homeFrag = new HomeFrag();
+    Leaderboard leaderboard;
     ProfileFrag profileFrag;
-    LoginSuccess loginSuccess;
+
 
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
@@ -30,9 +30,9 @@ public class HomepageFrag extends Fragment {
         View view = inflater.inflate(R.layout.mainview,container,false);
 
         homeFrag = new HomeFrag();
-        timelineFrag = new TimelineFrag();
+        leaderboard = new Leaderboard();
         profileFrag = new ProfileFrag();
-        loginSuccess = new LoginSuccess();
+
 
 
         fragmentManager = getFragmentManager();
@@ -52,7 +52,7 @@ public class HomepageFrag extends Fragment {
             public boolean onNavigationItemSelected( MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.timeline:
-                        changeFragment(timelineFrag);
+                        changeFragment(new Leaderboard());
                         return true;
 
                     case R.id.home:
@@ -60,7 +60,7 @@ public class HomepageFrag extends Fragment {
                         return true;
 
                     case R.id.profile:
-                        changeFragment(loginSuccess);
+                        changeFragment(new ProfileFrag());
                         return true;
 
                     default:

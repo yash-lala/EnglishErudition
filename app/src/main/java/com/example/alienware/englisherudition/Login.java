@@ -33,7 +33,7 @@ public class Login extends Fragment implements View.OnTouchListener{
     ChangeFrag tc;
     boolean error = true;
     String errorMessage = null;
-    String uid,name,userName,email,dateOfCreation;
+    String uid,name,userName,email,score,dateOfCreation;
     CoordinatorLayout coordinatorLayout;
 
 
@@ -45,7 +45,6 @@ public class Login extends Fragment implements View.OnTouchListener{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //loginSuccess = new LoginSuccess();
         signUp = new SignUp();
         houseKeeping = new HouseKeeping();
         theSessionKeeper = TheSessionKeeper.getInstance(getContext());
@@ -112,8 +111,9 @@ public class Login extends Fragment implements View.OnTouchListener{
                         name = innerJson.getString("name");
                         userName = innerJson.getString("user_name");
                         email = innerJson.getString("email");
+                        score = innerJson.getString("score");
                         dateOfCreation = innerJson.getString("DateOfCreation");
-                        theSessionKeeper.setIsLoggedIn(true,uid,name,userName,email,dateOfCreation);
+                        theSessionKeeper.setIsLoggedIn(true,uid,name,userName,email,score,dateOfCreation);
                         tc.bringChange(new HomepageFrag());
                     }
 

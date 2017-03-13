@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/profile_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:textColor="@color/SexyBlue"
+            />
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_name"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/SexyBlue"
+            android:layout_marginTop="3dp"
+            />
+
+
+        <TextView
+            android:id="@+id/profile_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_username"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textColor="@color/RaseelaLaal"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Score"
+            android:textColor="@color/RaseelaLaal"
+            android:layout_below="@+id/profile_score"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/profile_emailtext"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/SexyBlue"
+            android:layout_below="@+id/profile_score"
+            />
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/SexyBlue"
+            android:layout_below="@+id/profile_emailtext"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/profile_datetext"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="With Us Since :)"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/SexyBlue"
+            android:layout_below="@+id/profile_email"
+            />
+        <TextView
+            android:id="@+id/profile_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/SexyBlue"
+            android:layout_below="@+id/profile_datetext"
+            android:textAlignment="center"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/logout"
+        app:backgroundTint="@color/JyaadaGrey"
+        app:layout_anchorGravity="bottom|right|end"
+        app:useCompatPadding="false" />
+
+    </android.support.design.widget.CoordinatorLayout>

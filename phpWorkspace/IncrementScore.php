@@ -9,4 +9,5 @@ $score = $input['score'];
 
 $trigger->incrementScore($score,$uid);
 
+
  ?>

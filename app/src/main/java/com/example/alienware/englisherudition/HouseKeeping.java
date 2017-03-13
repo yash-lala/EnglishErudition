@@ -2,11 +2,15 @@ package com.example.alienware.englisherudition;
 
 import android.widget.EditText;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Enumeration;
+import java.util.Vector;
 
 /**
  * Created by Alienware on 05-02-2017.
@@ -65,6 +69,51 @@ public class HouseKeeping {
 
         return decoded;
     }
+
+    static int calLevel(int score){
+        int level=0;
+
+
+        return level;
+
+    }
+
+
+
+    static public int getScoreByVector(JSONArray answers, Vector userAnswers){
+
+        int i=0,score=0;
+
+            //JSONArray correctAns = new JSONArray(jsonObject.getJSONArray("answers"));
+
+            //Vector answers = QuizAdapter.getAnswers();
+            if(userAnswers!=null){
+                Enumeration e = userAnswers.elements();
+                while (e.hasMoreElements()){
+                    Object element = e.nextElement();
+                    if(element!=null){
+
+                        try {
+                            System.out.println(element+"&&"+answers.get(i));
+                        } catch (JSONException e1) {
+                            e1.printStackTrace();
+                        }
+                        try {
+                            if(element.equals(answers.get(i++))){
+                                score++;
+                            }
+                        } catch (JSONException e1) {
+                            e1.printStackTrace();
+                        }
+                    }
+                    }
+
+                return score;
+        }
+          return 0;
+    }
+
+
 
 
  //to encode and decode password
